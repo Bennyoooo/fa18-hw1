@@ -1,20 +1,26 @@
 def squared_sum(a, b)
+  c = a + b
+  return c * c
   # Q1 CODE HERE
 
 end
 
 def sort_array_plus_one(a)
+  b = a.sort;
+  b.map{|x| x+1 }
   # Q2 CODE HERE
 
 end
 
 def combine_name(first_name, last_name)
+  return first_name  + " " + last_name
   # Q3 CODE HERE
 
 end
 
 def blockin_time(a)
   # DO NOT EDIT THIS CODE BELOW
+
   require './foobar'
   Foobar.baz a
 end
@@ -48,5 +54,6 @@ def scrabble(word)
     y: 4,
     z: 10,
   }
+  word.split("").map{|n| n=values[n.to_sym]}. reduce(0, &:+)
   # Q5 CODE HERE
 end
